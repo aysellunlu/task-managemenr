@@ -2,7 +2,7 @@ import React from "react";
 import "./Text.css";
 
 const TableText = (props) => {
-  return <div className="table-text">{props.tableText}</div>;
+  return <p className="table-text">{props.tableText}</p>;
 };
 
 export default TableText;
