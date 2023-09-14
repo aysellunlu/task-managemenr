@@ -10,3 +10,8 @@
   margin: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.modal-text {
+  color: rgb(17, 27, 94);
+  font-weight: 500;
+  font-size: 16px;
+}

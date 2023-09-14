@@ -4,6 +4,7 @@ import Input from "../components/Input/Input";
 import "../App.css";
 import Table from "../components/Table/Table";
 import MainTitle from "../components/Text/MainTitle";
+import Modal from "../components/Modal/Modal";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <div className="table-container">
         <Table taskText="Task management task-1" />
       </div>
+      <Modal info="Create the task please"/>
     </div>
   );
 };
