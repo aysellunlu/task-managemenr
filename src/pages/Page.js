@@ -14,7 +14,11 @@ const Page = () => {
       <div className="table-container">
         <Table taskText="Task management task-1" />
       </div>
-      <Modal info="Create the task please"/>
+      <Modal
+        info="Create the task please"
+        placeholder="Task name"
+        modalBtnText="+ Create"
+      />
     </div>
   );
 };
