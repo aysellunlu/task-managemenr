@@ -25,6 +25,8 @@
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
+  align-self: center;
+  align-items: center;
 }
 .grid-task {
   padding: 5px;
