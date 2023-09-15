@@ -4,7 +4,6 @@ import "../App.css";
 import Table from "../components/Table/Table";
 import MainTitle from "../components/Text/MainTitle";
 import Modal from "../components/Modal/Modal";
-import TableText from "../components/Text/TableText";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -12,13 +11,13 @@ const Page = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     setTasks(savedTasks);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
 
   const openModal = () => {
     setModalOpen(true);
@@ -26,8 +25,6 @@ const Page = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
-
-  const createButton = document.getElementById("createButton");
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -60,7 +57,6 @@ const Page = () => {
           modalBtnText="+ Create"
           closeClick={closeModal}
           inputId={inputValue}
-          createButton={createButton}
           onClickAdd={onClickAdd}
           inputValue={inputValue}
           change={handleInputChange}

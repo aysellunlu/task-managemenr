@@ -24,7 +24,6 @@ const Modal = (props) => {
       />
       <Button
         buttonText={props.modalBtnText}
-        addButtonId={props.createButton}
         onClick={props.onClickAdd}
       />
     </div>
