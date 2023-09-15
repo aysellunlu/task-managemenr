@@ -21,3 +21,25 @@
   font-size: 16px;
   margin: 10px 10px 20px 5px;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-task {
+  padding: 5px;
+  text-align: center;
+  word-wrap: break-word;
+  margin-right: auto;
+}
+.grid-delete-btn {
+  padding: 3px;
+  text-align: center;
+  margin-left: auto;
+}
+.grid-checkbox{
+  padding: 3px;
+  text-align: center;
+  margin-right: auto;
+  
+}

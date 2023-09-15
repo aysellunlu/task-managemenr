@@ -43,6 +43,12 @@ const Page = () => {
     }
   };
 
+  const handleDeleteTask = (index) => {
+    const newTasks = [...tasks];
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+  };
+
   return (
     <div className="container">
       <MainTitle MainTitle="Task Management System" />
@@ -60,7 +66,7 @@ const Page = () => {
           change={handleInputChange}
         />
       )}
-      <Table tasks={tasks} />
+      <Table tasks={tasks} onClick={handleDeleteTask} />
     </div>
   );
 };
