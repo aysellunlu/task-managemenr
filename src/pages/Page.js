@@ -4,18 +4,21 @@ import "../App.css";
 import Table from "../components/Table/Table";
 import MainTitle from "../components/Text/MainTitle";
 import Modal from "../components/Modal/Modal";
+import TableText from "../components/Text/TableText";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [storedText, setStoredText] = useState("");
+  const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    const savedText = localStorage.getItem("inputValue");
-    if (savedText) {
-      setStoredText(savedText);
-    }
+    const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    setTasks(savedTasks);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const openModal = () => {
     setModalOpen(true);
@@ -34,6 +37,10 @@ const Page = () => {
     console.log("buton çalıştı");
     setModalOpen(false);
     localStorage.setItem("inputValue", inputValue);
+    if (inputValue.trim() !== "") {
+      setTasks([...tasks, inputValue]);
+      setInputValue("");
+    }
   };
 
   return (
@@ -53,10 +60,7 @@ const Page = () => {
           change={handleInputChange}
         />
       )}
-      <div className="table-container">
-        <Table taskText={storedText} />
-        {console.log(inputValue)}
-      </div>
+      <Table tasks={tasks} />
     </div>
   );
 };

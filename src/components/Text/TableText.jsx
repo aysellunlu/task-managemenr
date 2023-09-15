@@ -4,7 +4,11 @@ import "./Text.css";
 const TableText = (props) => {
   return (
     <div>
-      <p className="table-text">{props.tableText}</p>
+      {props.tasks.map((task, index) => (
+        <p className="table-text" key={index}>
+          {task}
+        </p>
+      ))}
     </div>
   );
 };

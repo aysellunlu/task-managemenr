@@ -16,9 +16,17 @@ const Modal = (props) => {
           <CloseButton click={props.closeClick} />
         </div>
       </div>
-
-      <Input placeholder={props.placeholder} inputId={props.inputValue} inputValue={props.inputValue} change={props.change}/>
-      <Button buttonText={props.modalBtnText} addButtonId={props.createButton} onClick={props.onClickAdd} />
+      <Input
+        placeholder={props.placeholder}
+        inputId={props.inputValue}
+        inputValue={props.inputValue}
+        change={props.change}
+      />
+      <Button
+        buttonText={props.modalBtnText}
+        addButtonId={props.createButton}
+        onClick={props.onClickAdd}
+      />
     </div>
   );
 };
