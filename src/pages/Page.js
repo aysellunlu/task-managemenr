@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Button/Button";
 import "../App.css";
 import Table from "../components/Table/Table";
@@ -7,6 +7,15 @@ import Modal from "../components/Modal/Modal";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [storedText, setStoredText] = useState("");
+
+  useEffect(() => {
+    const savedText = localStorage.getItem("inputValue");
+    if (savedText) {
+      setStoredText(savedText);
+    }
+  }, []);
 
   const openModal = () => {
     setModalOpen(true);
@@ -14,11 +23,17 @@ const Page = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
-  const inputValue = document.getElementById("inputValue");
+
   const createButton = document.getElementById("createButton");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
 
   const onClickAdd = () => {
     console.log("buton çalıştı");
+    setModalOpen(false);
+    localStorage.setItem("inputValue", inputValue);
   };
 
   return (
@@ -34,10 +49,13 @@ const Page = () => {
           inputId={inputValue}
           createButton={createButton}
           onClickAdd={onClickAdd}
+          inputValue={inputValue}
+          change={handleInputChange}
         />
       )}
       <div className="table-container">
-        <Table taskText="Task management task-1" />
+        <Table taskText={storedText} />
+        {console.log(inputValue)}
       </div>
     </div>
   );
