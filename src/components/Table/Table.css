@@ -1,6 +1,9 @@
-.table-style{
-    border-radius: 5px;
-    border: 1px solid rgb(240, 241, 242);
-    padding: 15px;
-    background-color:  rgb(240, 241, 242);
+.table-style {
+  border-radius: 5px;
+  border: 1px solid rgb(240, 241, 242);
+  padding: 15px;
+  background-color: rgb(240, 241, 242);
+  margin-top: 50px;
+  width: 400px;
+  line-height: 20px;
 }

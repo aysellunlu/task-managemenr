@@ -1,14 +1,20 @@
-.create-btn{
-    background-color: rgb(0, 166, 255);
-    padding: 10px;
-    border:1px solid rgb(0, 166, 255);
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    margin: 5px;
-   
+.create-btn {
+  background-color: rgb(0, 166, 255);
+  padding: 10px;
+  border: 1px solid rgb(0, 166, 255);
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  margin: 5px;
+}
+.close-btn {
+  color: blueviolet;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid rgb(242, 239, 244);
+  background-color: rgb(242, 239, 244);
 }

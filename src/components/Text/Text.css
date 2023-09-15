@@ -2,13 +2,18 @@
   color: rgb(17, 27, 94);
   font-weight: 400;
   font-size: 14px;
+  word-wrap: break-word;
+  border: 1px white solid;
+  padding:15px;
+  border-radius:5px;
 }
 .main-title {
   color: rgb(93, 38, 202);
   font-weight: 600;
   font-size: 24px;
-  margin: 20px;
+  margin: 20px 20px 40px 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 .modal-text {
   color: rgb(17, 27, 94);
