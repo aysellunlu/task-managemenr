@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/Button/index";
 import "../App.css";
-// import Table from "../components/Table/Table";
-import Modal from "../components/Modal/Modal";
+import Modal from "../components/Modal/index";
 import TaskRow from "../components/TaskRow";
+import TextInput from "../components/TextInput";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -54,7 +54,7 @@ const Page = () => {
   return (
     <div className="container">
       <h1>Task Management System</h1>
-      <Button type="primaryBtn">+ Add Task</Button>
+      <Button type="primaryBtn" onClick={openModal}>+ Add Task</Button>
       {tasks.map((task, index) => (
       <TaskRow key={index}>
           {task}
@@ -66,7 +66,7 @@ const Page = () => {
           placeholder="Task name"
           modalBtnText="+ Create"
           closeClick={closeModal}
-          inputId={inputValue}
+          id={inputValue}
           onClickAdd={onClickAdd}
           inputValue={inputValue}
           change={handleInputChange}
