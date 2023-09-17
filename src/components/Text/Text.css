@@ -33,11 +33,15 @@
   text-align: center;
   word-wrap: break-word;
   margin-right: auto;
+  align-self: center;
+  align-items: center;
 }
 .grid-delete-btn {
   padding: 3px;
   text-align: center;
   margin-left: auto;
+  align-self: center;
+  align-items: center;
 }
 .grid-checkbox{
   padding: 3px;

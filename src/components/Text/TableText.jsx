@@ -1,6 +1,7 @@
 import React from "react";
-import DeleteButton from "../Button/DeleteButton";
-import Checkbox from "../Input/Checkbox";
+import TrashIcon from "../../icons/TrashIcon";
+import Button from "../Button";
+import Checkbox from "../TextInput/Checkbox";
 import "./Text.css";
 
 const TableText = (props) => {
@@ -15,7 +16,9 @@ const TableText = (props) => {
             {task}
           </span>
           <span className="grid-delete-btn">
-            <DeleteButton onClick={props.onClick} />
+            <Button type="dangerBtn">
+              <TrashIcon/>
+            </Button>
           </span>
         </p>
       ))}
