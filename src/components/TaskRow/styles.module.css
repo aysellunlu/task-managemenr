@@ -35,3 +35,129 @@
 .trashBg {
   background: #f44a6c;
 }
+@media screen and (max-width: 500px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .checkboxColumn {
+    flex: 0 0 calc(5%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .textColumn {
+    flex: 0 0 calc(80%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .trashBtnColumn {
+    flex: 0 0 calc(5%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .checkboxColumn {
+    flex: 0 0 calc(5%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .textColumn {
+    flex: 0 0 calc(80%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .trashBtnColumn {
+    flex: 0 0 calc(5%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .checkboxColumn {
+    flex: 0 0 calc(5%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .textColumn {
+    flex: 0 0 calc(80%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+  .trashBtnColumn {
+    flex: 0 0 calc(5%);
+    margin: 2px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}

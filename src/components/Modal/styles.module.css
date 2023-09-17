@@ -37,8 +37,7 @@
 }
 .modalText {
   font-size: 16px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .gridInput {
   background-color: rgba(255, 255, 255, 0.8);
@@ -55,4 +54,244 @@
   align-self: start;
   display: flex;
   flex: 0 0 calc(15%);
+}
+@media screen and (max-width: 500px) {
+  .modalBg {
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 4px 50px 0px #cec6e0;
+    border: white 1px solid;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+  }
+  .gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-self: start;
+    width: 300px;
+    border-bottom: #efedf3 1px solid;
+    margin-bottom: 20px;
+  }
+  .gridTitle {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(80%);
+    margin: 5px;
+    display: flex;
+  }
+  .gridCloseBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(5%);
+  }
+  .modalText {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+  .gridInput {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(100%);
+    display: flex;
+  }
+  .gridAddBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(100%);
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .modalBg {
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 4px 50px 0px #cec6e0;
+    border: white 1px solid;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+  }
+  .gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-self: start;
+    width: 400px;
+    border-bottom: #efedf3 1px solid;
+    margin-bottom: 20px;
+  }
+  .gridTitle {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(80%);
+    margin: 5px;
+    display: flex;
+  }
+  .gridCloseBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(5%);
+  }
+  .modalText {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+  .gridInput {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(80%);
+    display: flex;
+  }
+  .gridAddBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(15%);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .modalBg {
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 4px 50px 0px #cec6e0;
+    border: white 1px solid;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+  }
+  .gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-self: start;
+    width: 500px;
+    border-bottom: #efedf3 1px solid;
+    margin-bottom: 20px;
+  }
+  .gridTitle {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(90%);
+    margin: 5px;
+    display: flex;
+  }
+  .gridCloseBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(5%);
+  }
+  .modalText {
+    font-size: 16px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .gridInput {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(80%);
+    display: flex;
+  }
+  .gridAddBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(15%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .modalBg {
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 4px 50px 0px #cec6e0;
+    border: white 1px solid;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+  }
+  .gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-self: start;
+    width: 500px;
+    border-bottom: #efedf3 1px solid;
+    margin-bottom: 20px;
+  }
+  .gridTitle {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(90%);
+    margin: 5px;
+    display: flex;
+  }
+  .gridCloseBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(5%);
+  }
+  .modalText {
+    font-size: 16px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .gridInput {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    flex: 0 0 calc(80%);
+    display: flex;
+  }
+  .gridAddBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    align-self: start;
+    display: flex;
+    flex: 0 0 calc(15%);
+  }
 }
