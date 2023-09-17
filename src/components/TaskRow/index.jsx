@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./styles.module.css";
 import TrashIcon from "../../icons/TrashIcon";
 import CheckboxInput from "../CheckboxInput";
+import Button from "../Button";
 
 const TaskRow = ({
   className = "",
@@ -16,13 +17,9 @@ const TaskRow = ({
         <CheckboxInput />
       </div>
       <div className={`${classes.textColumn}`}>{children}</div>
-      <div
-        className={`${classes.trashBtnColumn} ${classes["trashBg"]}`}
-        type="button"
-        onClick={onClickDelete}
-      >
+      <Button type="closeBtn" onClick={onClickDelete}>
         <TrashIcon />
-      </div>
+      </Button>
     </div>
   );
 };

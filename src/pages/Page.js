@@ -3,8 +3,9 @@ import Button from "../components/Button/index";
 import "../App.css";
 import Modal from "../components/Modal/index";
 import TaskRow from "../components/TaskRow";
+import classes from "./styles.module.css";
 
-const Page = () => {
+const Page = ({ className = "", ...props }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
@@ -56,11 +57,13 @@ const Page = () => {
       <Button type="primaryBtn" onClick={openModal}>
         + Add Task
       </Button>
-      {tasks.map((task, index) => (
-        <TaskRow key={index} onClickDelete={handleDeleteTask}>
-          {task}
-        </TaskRow>
-      ))}
+      <div className={`${classes.taskContainer}`}>
+        {tasks.map((task, index) => (
+          <TaskRow key={index} onClickDelete={handleDeleteTask}>
+            {task}
+          </TaskRow>
+        ))}
+      </div>
       {modalOpen && (
         <Modal
           children="Create the task please"

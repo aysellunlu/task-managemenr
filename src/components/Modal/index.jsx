@@ -20,7 +20,7 @@ const Modal = ({
           <div className={`${classes.modalText}`}>{children}</div>
         </div>
         <div className={`${classes.gridCloseBtn}`}>
-          <Button onClick={closeClick} type="dangerBtn">
+          <Button onClick={closeClick} type="closeBtn">
             X
           </Button>
         </div>
@@ -35,7 +35,7 @@ const Modal = ({
           />
         </div>
         <Button onClick={onClickAdd} type="primaryBtn">
-          + Create task
+          + Create
         </Button>
       </div>
     </div>
