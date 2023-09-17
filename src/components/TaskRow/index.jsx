@@ -7,6 +7,7 @@ const TaskRow = ({
   className = "",
   type = "dangerBtn",
   children,
+  onClickDelete,
   ...props
 }) => {
   return (
@@ -15,7 +16,11 @@ const TaskRow = ({
         <CheckboxInput />
       </div>
       <div className={`${classes.textColumn}`}>{children}</div>
-      <div className={`${classes.trashBtnColumn} ${classes["trashBg"]}`}>
+      <div
+        className={`${classes.trashBtnColumn} ${classes["trashBg"]}`}
+        type="button"
+        onClick={onClickDelete}
+      >
         <TrashIcon />
       </div>
     </div>

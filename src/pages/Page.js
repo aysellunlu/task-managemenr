@@ -54,12 +54,14 @@ const Page = () => {
   return (
     <div className="container">
       <h1>Task Management System</h1>
-      <Button type="primaryBtn" onClick={openModal}>+ Add Task</Button>
+      <Button type="primaryBtn" onClick={openModal}>
+        + Add Task
+      </Button>
       {tasks.map((task, index) => (
-      <TaskRow key={index}>
+        <TaskRow key={index} onClickDelete={handleDeleteTask}>
           {task}
-      </TaskRow>
-       ))}
+        </TaskRow>
+      ))}
       {modalOpen && (
         <Modal
           children="Create the task please"
