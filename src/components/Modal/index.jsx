@@ -25,15 +25,19 @@ const Modal = ({
           </Button>
         </div>
       </div>
-      <TextInput
-        placeholder="Enter task name"
-        id={id}
-        onChange={onChange}
-        inputValue={inputValue}
-      />
-      <Button onClick={onClickAdd} type="primaryBtn">
-        + Create task
-      </Button>
+      <div className={`${classes.gridContainer}`}>
+        <div className={`${classes.gridInput}`}>
+          <TextInput
+            placeholder={placeholder}
+            id={id}
+            onChange={onChange}
+            inputValue={inputValue}
+          />
+        </div>
+        <Button onClick={onClickAdd} type="primaryBtn">
+          + Create task
+        </Button>
+      </div>
     </div>
   );
 };

@@ -3,7 +3,6 @@ import Button from "../components/Button/index";
 import "../App.css";
 import Modal from "../components/Modal/index";
 import TaskRow from "../components/TaskRow";
-import TextInput from "../components/TextInput";
 
 const Page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -66,7 +65,6 @@ const Page = () => {
         <Modal
           children="Create the task please"
           placeholder="Task name"
-          modalBtnText="+ Create"
           closeClick={closeModal}
           id={inputValue}
           onClickAdd={onClickAdd}
