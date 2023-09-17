@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/index";
 import TextInput from "../TextInput";
-import "./Modal.css";
 import classes from "./styles.module.css";
 
 const Modal = ({
