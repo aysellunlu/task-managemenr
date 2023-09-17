@@ -8,21 +8,13 @@ import classes from "./styles.module.css";
 const Page = ({ className = "", ...props }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
 
   useEffect(() => {
-    const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    setTasks(savedTasks);
-  }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("tasks", JSON.stringify(tasks));
-  // }, [tasks]);
-
-  // useEffect(() => {
-  //   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-  //   setTasks(savedTasks);
-  // }, []);
+    console.log(tasks);
+  }, [tasks]);
 
   const openModal = () => {
     setModalOpen(true);
@@ -37,18 +29,20 @@ const Page = ({ className = "", ...props }) => {
 
   const onClickAdd = () => {
     setModalOpen(false);
-    localStorage.setItem("inputValue", inputValue);
     if (inputValue.trim()) {
       const newTasks = [...tasks, inputValue];
       localStorage.setItem("tasks", JSON.stringify(newTasks));
       setTasks(newTasks);
       setInputValue("");
+     
     }
   };
 
   const handleDeleteTask = (taskId) => {
+    
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
+    console.log("deletebtn,")
   };
 
   return (
@@ -72,9 +66,10 @@ const Page = ({ className = "", ...props }) => {
           id={inputValue}
           onClickAdd={onClickAdd}
           inputValue={inputValue}
-          change={handleInputChange}
+          onChange={handleInputChange}
         />
       )}
+      {console.log(inputValue)}
     </div>
   );
 };

@@ -30,7 +30,7 @@ const Modal = ({
           <TextInput
             placeholder={placeholder}
             id={id}
-            onChange={onChange}
+            onChangeTextInput={onChange}
             inputValue={inputValue}
           />
         </div>

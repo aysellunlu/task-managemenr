@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 h1 {
-  color: rgb(68, 23, 165);
+  color:var(--purple);
   font-weight: 600;
   font-size: 24px;
   margin: 20px 20px 40px 20px;

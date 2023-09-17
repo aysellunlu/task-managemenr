@@ -1,0 +1,10 @@
+:root {
+  --primary-color: rgb(59, 177, 241);
+  --hover-primary-color: rgb(92, 191, 245);
+  --danger-color: #f44a6c;
+  --hover-danger-color: #ea758c;
+  --purple: rgb(68, 23, 165);
+  --white: #ffffff;
+  --background-gray: rgb(246, 246, 249);
+  --input-border-gray: rgb(211, 218, 222);
+}

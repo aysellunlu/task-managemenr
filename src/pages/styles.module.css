@@ -1,6 +1,6 @@
-.taskContainer{
-    background-color: rgb(241, 241, 248);
-    padding: 20px;
-    margin-top: 50px;
-    border-radius: 5px;
+.taskContainer {
+  background-color: var(--background-gray);
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
 }
