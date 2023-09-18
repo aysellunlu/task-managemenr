@@ -1,7 +1,9 @@
 .input {
   padding: 10px;
-  border: 2px solid var(--input-border-gray);
+  border: 1px solid var(--input-border-gray-dark);
   border-radius: 5px;
   margin: 5px;
   width: 90%;
+  background-color: var(--input-dark-bg);
+  color: var(--white);
 }

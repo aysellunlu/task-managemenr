@@ -27,22 +27,22 @@ const Page = ({ className = "", ...props }) => {
     setInputValue(e.target.value);
   };
 
-  const onClickAdd = () => {
+  const onClickAdd = (taskId) => {
     setModalOpen(false);
     if (inputValue.trim()) {
       const newTasks = [...tasks, inputValue];
       localStorage.setItem("tasks", JSON.stringify(newTasks));
       setTasks(newTasks);
       setInputValue("");
-     
+
+      const taskId = tasks.length+1;
+      console.log("task id:", taskId);
     }
   };
 
   const handleDeleteTask = (taskId) => {
-    
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
-    console.log("deletebtn,")
   };
 
   return (
@@ -69,7 +69,6 @@ const Page = ({ className = "", ...props }) => {
           onChange={handleInputChange}
         />
       )}
-      {console.log(inputValue)}
     </div>
   );
 };

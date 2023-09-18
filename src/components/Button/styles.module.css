@@ -17,8 +17,8 @@
   align-self: center;
 }
 .primaryBtn:hover {
-  background-color:var(--hover-primary-color);
-  color:var(--white);
+  background-color: var(--hover-primary-color);
+  color: var(--white);
   padding: 10px;
 }
 .dangerBtn {
@@ -32,7 +32,7 @@
   padding: 3px;
 }
 .closeBtn {
-  background: var(--white);
-  color:var(--hover-danger-color);
+  background: var(--modal-bg-dark);
+  color: var(--hover-danger-color);
   padding: 3px;
 }

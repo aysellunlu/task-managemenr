@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(59, 177, 241);
+  --primary-color: rgb(19, 161, 237);
   --hover-primary-color: rgb(92, 191, 245);
   --danger-color: #f44a6c;
   --hover-danger-color: #ea758c;
@@ -7,4 +7,10 @@
   --white: #ffffff;
   --background-gray: rgb(246, 246, 249);
   --input-border-gray: rgb(211, 218, 222);
+  --bg-dark: #020a2b;
+  --bg-purple: #7961d6;
+  --background-dark-gray: #0f1635;
+  --modal-bg-dark: #19224b;
+  --input-dark-bg: #242f5e;
+  --input-border-gray-dark: #313753;
 }
