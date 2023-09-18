@@ -3,6 +3,7 @@ import classes from "./styles.module.css";
 import TrashIcon from "../../icons/TrashIcon";
 import CheckboxInput from "../CheckboxInput";
 import Button from "../Button";
+import EditIcon from "../../icons/EditIcon";
 
 const TaskRow = ({
   className = "",
@@ -17,9 +18,16 @@ const TaskRow = ({
         <CheckboxInput />
       </div>
       <div className={`${classes.textColumn}`}>{children}</div>
-      <Button type="closeBtn" onClick={onClickDelete}>
-        <TrashIcon />
-      </Button>
+      <div className={`${classes.btnColumn}`}>
+        <Button type="closeBtn" onClick={onClickDelete}>
+          <EditIcon />
+        </Button>
+      </div>
+      <div className={`${classes.btnColumn}`}>
+        <Button type="closeBtn" onClick={onClickDelete}>
+          <TrashIcon />
+        </Button>
+      </div>
     </div>
   );
 };

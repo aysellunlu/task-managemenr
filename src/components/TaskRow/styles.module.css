@@ -9,7 +9,7 @@
   padding: 5px;
 }
 .checkboxColumn {
-  flex: 0 0 calc(5%);
+  flex: 0 0 calc(3%);
   margin: 5px;
   display: flex;
   align-self: center;
@@ -21,9 +21,9 @@
   display: flex;
   align-self: center;
   align-items: center;
-  color: var(--white);
+  color: var(--dark-text-color);
 }
-.trashBtnColumn {
+.btnColumn {
   flex: 0 0 calc(5%);
   margin: 5px;
   display: flex;
@@ -56,13 +56,13 @@
     align-items: center;
   }
   .textColumn {
-    flex: 0 0 calc(80%);
+    flex: 0 0 calc(60%);
     margin: 2px;
     display: flex;
     align-self: center;
     align-items: center;
   }
-  .trashBtnColumn {
+  .btnColumn {
     flex: 0 0 calc(5%);
     margin: 2px;
     display: flex;
@@ -87,20 +87,20 @@
     font-size: 14px;
   }
   .checkboxColumn {
-    flex: 0 0 calc(5%);
+    flex: 0 0 calc(4%);
     margin: 2px;
     display: flex;
     align-self: center;
     align-items: center;
   }
   .textColumn {
-    flex: 0 0 calc(80%);
+    flex: 0 0 calc(60%);
     margin: 2px;
     display: flex;
     align-self: center;
     align-items: center;
   }
-  .trashBtnColumn {
+  .btnColumn {
     flex: 0 0 calc(5%);
     margin: 2px;
     display: flex;

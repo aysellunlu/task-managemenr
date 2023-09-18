@@ -7,10 +7,11 @@
   --white: #ffffff;
   --background-gray: rgb(246, 246, 249);
   --input-border-gray: rgb(211, 218, 222);
-  --bg-dark: #020a2b;
-  --bg-purple: #7961d6;
-  --background-dark-gray: #0f1635;
+  --bg-dark: #0f1634;
+  --bg-purple: #4a2fb8;
+  --background-dark-gray: #141a39;
   --modal-bg-dark: #19224b;
   --input-dark-bg: #242f5e;
   --input-border-gray-dark: #313753;
+  --dark-text-color:#7b8097;
 }
