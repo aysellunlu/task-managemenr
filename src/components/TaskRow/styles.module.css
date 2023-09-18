@@ -132,7 +132,7 @@
     align-items: center;
   }
   .textColumn {
-    flex: 0 0 calc(80%);
+    flex: 0 0 calc(70%);
     margin: 2px;
     display: flex;
     align-self: center;
