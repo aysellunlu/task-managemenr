@@ -19,7 +19,7 @@ const TaskRow = ({
       </div>
       <div className={`${classes.textColumn}`}>{children}</div>
       <div className={`${classes.btnColumn}`}>
-        <Button type="closeBtn" onClick={onClickDelete}>
+        <Button type="closeBtn">
           <EditIcon />
         </Button>
       </div>

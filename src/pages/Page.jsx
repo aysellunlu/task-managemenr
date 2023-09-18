@@ -11,9 +11,8 @@ const Page = ({ className = "", ...props }) => {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );
-
   useEffect(() => {
-    console.log(tasks);
+    console.log("task", tasks);
   }, [tasks]);
 
   const openModal = () => {
@@ -27,36 +26,39 @@ const Page = ({ className = "", ...props }) => {
     setInputValue(e.target.value);
   };
 
-  const onClickAdd = (taskId) => {
+  const onClickAdd = (text) => {
     setModalOpen(false);
-    if (inputValue.trim()) {
-      const newTasks = [...tasks, inputValue];
+    setTasks((tasks) => {
+      let newId = 1;
+      const lastTask = tasks[tasks.length - 1];
+      if (lastTask) newId = lastTask.id + 1;
+      const newTasks = [...tasks, { id: newId, text }];
       localStorage.setItem("tasks", JSON.stringify(newTasks));
-      setTasks(newTasks);
-      setInputValue("");
-
-      const taskId = tasks.length+1;
-      console.log("task id:", taskId);
-    }
+      return [...tasks, { id: newId, text }];
+    });
   };
 
-  const handleDeleteTask = (taskId) => {
-    const newTasks = tasks.filter((task) => task.id !== taskId);
-    setTasks(newTasks);
+  const handleClickDelete = (id) => {
+    setTasks(tasks);
+    const newTasks = tasks.filter((task) => task.id !== id);
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
   };
 
   return (
     <div className="container">
+      {console.log("bu", tasks)}
       <h1>Task Management System</h1>
       <Button type="primaryBtn" onClick={openModal}>
         + Add Task
       </Button>
       <div className={`${classes.taskContainer}`}>
-        {tasks.map((task, index) => (
-          <TaskRow key={index} onClickDelete={handleDeleteTask}>
-            {task}
-          </TaskRow>
-        ))}
+        {tasks &&
+          tasks.map((task, index) => (
+            <TaskRow key={index} onClickDelete={handleClickDelete()}>
+              {task.text}
+            </TaskRow>
+          ))}
+        {tasks.id}
       </div>
       {modalOpen && (
         <Modal
