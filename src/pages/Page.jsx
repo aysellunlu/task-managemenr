@@ -39,8 +39,8 @@ const Page = ({ className = "", ...props }) => {
   };
 
   const handleClickDelete = (id) => {
-    setTasks(tasks);
     const newTasks = tasks.filter((task) => task.id !== id);
+    setTasks(newTasks);
     localStorage.setItem("tasks", JSON.stringify(newTasks));
   };
 
@@ -54,7 +54,7 @@ const Page = ({ className = "", ...props }) => {
       <div className={`${classes.taskContainer}`}>
         {tasks &&
           tasks.map((task, index) => (
-            <TaskRow key={index} onClickDelete={handleClickDelete()}>
+            <TaskRow key={task.id} onClickDelete={handleClickDelete}>
               {task.text}
             </TaskRow>
           ))}
